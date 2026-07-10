@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasmine Walker — [MATRIX]</title>
+  <meta name="description" content="Jasmine Walker — Technical Engineer, Applications & Systems. Decrypting candidate profile..." />
+  <meta property="og:title" content="Jasmine Walker — [MATRIX]" />
+  <meta property="og:description" content="Decrypting candidate profile... match score: 94.7%" />
+  <meta property="og:image" content="/assets/img/og-image.png" />
+  <meta property="og:url" content="https://jasminejwalker.com/matrix" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jasmine Walker — [MATRIX]" />
+  <meta name="twitter:description" content="Decrypting candidate profile... match score: 94.7%" />
+  <meta name="twitter:image" content="/assets/img/og-image.png" />
+  <link rel="icon" id="favicon" type="image/x-icon" href="/assets/img/favicon-matrix.ico" />
+  <script defer data-domain="jasminejwalker.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/css/shared.css" />
+  <link rel="stylesheet" href="/css/matrix.css" />
+</head>
+<body class="matrix-page">
+
+  <!-- Canvas code rain -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scanlines overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Back link -->
+  <a href="/" class="matrix-back" aria-label="Back to theme picker">← back</a>
+
+  <!-- Skip button — always visible, bypasses everything -->
+  <button id="skip-intro" class="skip-intro" aria-label="Skip intro and go straight to resume">Skip →</button>
+
+  <!-- Download resume -->
+  <a id="matrix-download" class="matrix-download hidden" href="#" download="Jasmine_Walker_Resume.pdf" target="_blank" rel="noopener" aria-label="Download resume PDF" onclick="trackEvent('matrix-resume-download')">↓ Resume</a>
+
+  <!-- Rain controls -->
+  <div class="rain-controls" aria-label="Rain controls">
+    <button id="rain-slower" aria-label="Slower rain" title="Slower">▼</button>
+    <button id="rain-faster" aria-label="Faster rain" title="Faster">▲</button>
+    <button id="rain-density" aria-label="Toggle density" title="Toggle density" class="density-btn">⠿</button>
+  </div>
+
+  <!-- ===== PHASE 1: MORPHEUS SCREEN ===== -->
+  <div id="morpheus-screen" class="morpheus-screen" aria-live="polite" role="status">
+    <div id="morpheus-lines" class="morpheus-lines"></div>
+    <span class="matrix-cursor" aria-hidden="true">▌</span>
+
+    <!-- Pill choice — revealed after dialogue finishes -->
+    <div id="pill-choice" class="pill-choice hidden" role="group" aria-label="Choose your path">
+      <div class="pill-prompt">&gt; YOU TAKE THE BLUE PILL — THE STORY ENDS.</div>
+      <div class="pill-prompt">&gt; YOU TAKE THE RED PILL — YOU STAY IN WONDERLAND.</div>
+      <div class="pill-prompt pill-prompt-sub">&gt; CHOOSE:</div>
+      <div class="pill-buttons">
+        <button id="btn-red-pill" class="pill-btn red-pill-btn" aria-label="Take the red pill — see the resume">
+          <span class="pill-icon">●</span>
+          <span class="pill-label">RED PILL</span>
+          <span class="pill-sub">see how deep the rabbit hole goes</span>
+        </button>
+        <button id="btn-blue-pill" class="pill-btn blue-pill-btn" aria-label="Take the blue pill — return to the beginning">
+          <span class="pill-icon">●</span>
+          <span class="pill-label">BLUE PILL</span>
+          <span class="pill-sub">wake up and believe what you want</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PHASE 2: TERMINAL INTRO ===== -->
+  <div id="matrix-intro" class="matrix-intro hidden" aria-live="polite" role="status">
+    <div id="intro-lines"></div>
+    <span class="matrix-cursor" aria-hidden="true">▌</span>
+  </div>
+
+  <!-- ===== PHASE 3: RESUME ===== -->
+  <div id="matrix-resume" class="matrix-resume hidden" aria-label="Resume content">
+    <div id="matrix-resume-inner"></div>
+  </div>
+
+  <!-- Role match panel (shown with resume) -->
+  <aside id="role-match-panel" class="role-match-panel hidden" aria-label="Role match analysis">
+    <div class="rmp-header">&gt; ROLE_MATCH_ANALYSIS</div>
+    <div id="rmp-items"></div>
+  </aside>
+
+  <!-- Floating contact CTA -->
+  <div id="contact-cta" class="contact-cta-matrix" role="complementary">
+    <button id="cta-trigger" class="cta-btn-matrix" aria-expanded="false" aria-controls="contact-panel">
+      &gt; ESTABLISH_CONNECTION
+    </button>
+    <div id="contact-panel" class="contact-panel-matrix hidden" role="dialog" aria-label="Contact Jasmine Walker"></div>
+  </div>
+
+  <script type="module" src="/js/shared.js"></script>
+  <script type="module" src="/js/matrix-rain.js"></script>
+  <script type="module" src="/js/matrix-typing.js"></script>
+  <script type="module" src="/js/contact-cta.js"></script>
+</body>
+</html>

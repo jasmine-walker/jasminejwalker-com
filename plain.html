@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasmine Walker — Resume</title>
+  <meta name="description" content="Jasmine Walker — Application developer & systems engineer. 10+ years of experience building scalable solutions." />
+  <meta property="og:title" content="Jasmine Walker — Resume" />
+  <meta property="og:description" content="Application developer & systems engineer · 10+ years experience." />
+  <meta property="og:image" content="/assets/img/og-image.png" />
+  <meta property="og:url" content="https://jasminejwalker.com/plain" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jasmine Walker — Resume" />
+  <meta name="twitter:description" content="Application developer &amp; systems engineer · 10+ years experience." />
+  <meta name="twitter:image" content="/assets/img/og-image.png" />
+  <link rel="icon" id="favicon" type="image/x-icon" href="/assets/img/favicon-plain.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script defer data-domain="jasminejwalker.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/css/shared.css" />
+  <link rel="stylesheet" href="/css/plain.css" />
+</head>
+<body class="plain-page">
+
+  <a href="/" class="back-link" aria-label="Back to theme picker">← back to picker</a>
+
+  <div class="plain-container" id="resume-content">
+    <div class="loading-state">Loading resume…</div>
+  </div>
+
+  <!-- Floating contact CTA -->
+  <div id="contact-cta" class="contact-cta-plain" aria-label="Contact options" role="complementary">
+    <button id="cta-trigger" class="cta-btn-plain" aria-expanded="false" aria-controls="contact-panel">
+      Get in touch
+    </button>
+    <div id="contact-panel" class="contact-panel-plain hidden" role="dialog" aria-label="Contact Jasmine Walker"></div>
+  </div>
+
+  <script type="module" src="/js/shared.js"></script>
+  <script type="module" src="/js/contact-cta.js"></script>
+  <script type="module">
+    import { loadResume, formatDate } from '/js/shared.js';
+
+    async function renderPlain() {
+      const r = await loadResume();
+      if (!r) return;
+
+      trackEvent('view-plain');
+
+      const container = document.getElementById('resume-content');
+
+      const FIT_TAGS = ['FULLSTACK_DEV','AUTOMATION_AI','ENTERPRISE_SUPPORT','SQL_DATA','CICD_CLOUD','STAKEHOLDER_TRANSLATION','DOCUMENTATION','CROSS_FUNCTIONAL'];
+      const fitHtml = r.roleMatch.matches
+        .filter(m => FIT_TAGS.includes(m.tag))
+        .map(m => `
+          <div class="fit-item">
+            <div class="fit-need">${m.need}</div>
+            <div class="fit-evidence">${m.evidence}</div>
+          </div>
+        `).join('');
+
+      const skillsHtml = `
+        <div class="skill-row"><span class="skill-cat">Languages</span><span class="skill-vals">${r.skills.languages.join(', ')}</span></div>
+        <div class="skill-row"><span class="skill-cat">Frameworks &amp; Tools</span><span class="skill-vals">${r.skills.frameworks.join(', ')}</span></div>
+        <div class="skill-row"><span class="skill-cat">Databases</span><span class="skill-vals">${r.skills.databases.join(', ')}</span></div>
+        <div class="skill-row"><span class="skill-cat">Cloud &amp; Deployment</span><span class="skill-vals">${r.skills.cloud.join(', ')}</span></div>
+        <div class="skill-row"><span class="skill-cat">AI &amp; Automation</span><span class="skill-vals">${r.skills.aiAndAutomation.join(', ')}</span></div>
+        <div class="skill-row"><span class="skill-cat">Spoken Languages</span><span class="skill-vals">${r.skills.spokenLanguages.join(', ')}</span></div>
+      `;
+
+      const expHtml = r.experience.map(job => `
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-title-company">
+              <span class="exp-title">${job.title}</span>
+              <span class="exp-company">${job.company}</span>
+            </div>
+            <div class="exp-meta">
+              <span class="exp-dates">${formatDate(job.startDate)} – ${!job.endDate ? 'Present' : formatDate(job.endDate)}</span>
+              <span class="exp-location">${job.location}</span>
+            </div>
+          </div>
+          <ul class="exp-bullets">
+            ${job.bullets.map(b => `<li>${b}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+
+      const eduHtml = r.education.map(e => `
+        <div class="edu-item">
+          <div class="edu-degree">${e.degree}</div>
+          <div class="edu-school">${e.school} · ${e.year}</div>
+        </div>
+      `).join('');
+
+      const workHtml = r.projects.map(w => `
+        <div class="work-item">
+          <div class="work-title">${w.title}${w.context ? ` <span class="work-context">— ${w.context}</span>` : ''}${w.liveUrl ? ` <a href="${w.liveUrl}" target="_blank" rel="noopener" class="work-link">Live</a>` : ''}${w.codeUrl ? ` <a href="${w.codeUrl}" target="_blank" rel="noopener" class="work-link">Code</a>` : ''}</div>
+          <div class="work-desc">${w.description}</div>
+        </div>
+      `).join('');
+
+      const volHtml = r.volunteering.map(v => `
+        <div class="vol-item">
+          <span class="vol-role">${v.role}</span>, <span class="vol-org">${v.org}</span>
+          <span class="vol-desc"> — ${v.description}</span>
+        </div>
+      `).join('');
+
+      const recsHtml = r.recommendations.map(rec => `
+        <div class="rec-item">
+          <blockquote class="rec-quote">"${rec.quote}"</blockquote>
+          <div class="rec-from">— ${rec.from}</div>
+        </div>
+      `).join('');
+
+      container.innerHTML = `
+        <header class="resume-header">
+          <div class="resume-header-top">
+            <div class="resume-header-text">
+              <h1 class="resume-name">${r.meta.name}</h1>
+              <p class="resume-tagline">${r.meta.tagline}</p>
+            </div>
+            <img src="/assets/img/jasmine.png" class="resume-photo" alt="Jasmine Walker" />
+          </div>
+          <div class="resume-contact">
+            <a href="mailto:${r.contact.email}">${r.contact.email}</a>
+            <span class="sep">·</span>
+            <a href="tel:${r.contact.phone.replace(/\D/g,'')}">${r.contact.phone}</a>
+            <span class="sep">·</span>
+            <span>${r.meta.location}</span>
+            <span class="sep">·</span>
+            <a href="https://${r.meta.website}" target="_blank" rel="noopener">${r.meta.website}</a>
+            <span class="sep">·</span>
+            <a href="${r.contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">·</span>
+            <a href="${r.contact.github}" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </header>
+
+        <section class="resume-section" aria-labelledby="summary-heading">
+          <h2 class="section-heading" id="summary-heading">Summary</h2>
+          <p class="summary-text">${r.summary}</p>
+        </section>
+
+        <section class="resume-section fit-section" aria-labelledby="fit-heading">
+          <h2 class="section-heading" id="fit-heading">Where My Background Fits</h2>
+          <div class="fit-grid">${fitHtml}</div>
+        </section>
+
+        <section class="resume-section" aria-labelledby="skills-heading">
+          <h2 class="section-heading" id="skills-heading">Skills</h2>
+          <div class="skills-grid">${skillsHtml}</div>
+        </section>
+
+        <section class="resume-section" aria-labelledby="exp-heading">
+          <h2 class="section-heading" id="exp-heading">Experience</h2>
+          ${expHtml}
+        </section>
+
+        <section class="resume-section" aria-labelledby="edu-heading">
+          <h2 class="section-heading" id="edu-heading">Education</h2>
+          ${eduHtml}
+        </section>
+
+        <section class="resume-section" aria-labelledby="work-heading">
+          <h2 class="section-heading" id="work-heading">Projects</h2>
+          ${workHtml}
+        </section>
+
+        <section class="resume-section" aria-labelledby="vol-heading">
+          <h2 class="section-heading" id="vol-heading">Volunteering</h2>
+          ${volHtml}
+        </section>
+
+        <section class="resume-section" aria-labelledby="recs-heading">
+          <h2 class="section-heading" id="recs-heading">Recommendations</h2>
+          ${recsHtml}
+        </section>
+
+        <section class="resume-section" aria-labelledby="interests-heading">
+          <h2 class="section-heading" id="interests-heading">Interests</h2>
+          <p class="interests-text">${r.interests.join(' · ')}</p>
+        </section>
+
+        <div class="print-actions no-print">
+          <a href="${r.meta.resumePdfUrl}" download="Jasmine_Walker_Resume.pdf" target="_blank" rel="noopener" class="download-btn" aria-label="Download PDF" onclick="trackEvent('resume-download')">Download PDF</a>
+        </div>
+      `;
+
+    }
+
+    renderPlain();
+  </script>
+</body>
+</html>

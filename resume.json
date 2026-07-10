@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "name": "Jasmine Walker",
+    "tagline": "Technical Engineer, Applications & Systems",
+    "location": "High Springs, FL",
+    "website": "jasminejwalker.com",
+    "lastUpdated": "2026-07-10",
+    "resumePdfUrl": "https://drive.google.com/uc?export=download&id=1-N8oziuQgrP5JwJoVtiOyqQtmjJuWaW5"
+  },
+  "contact": {
+    "email": "jasminewalkerj@outlook.com",
+    "phone": "+1 (352) 284-9200",
+    "linkedin": "https://www.linkedin.com/in/jasminejwalker",
+    "github": "https://github.com/jasmine-walker",
+    "website": "https://jasminejwalker.com"
+  },
+  "summary": "Senior technical professional with over eleven years supporting enterprise software customers, resolving complex issues and translating technical concepts for technical and non-technical audiences alike. Combines that experience with hands-on full-stack and automation skills (Python, React, Node, AI), shipping live applications end to end. Known for clear communication, steady troubleshooting, and keeping the customer's experience at the center of every technical decision.",
+  "skills": {
+    "languages": ["Python", "JavaScript", "SQL", "HTML/CSS", "Java", "C++"],
+    "frameworks": ["React", "Node.js", "Express", "Vite", "Git/GitHub", "GitHub Actions", "REST APIs", "JWT auth"],
+    "databases": ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Oracle"],
+    "cloud": ["AWS", "Azure", "Oracle Cloud", "Vercel", "Render", "Supabase"],
+    "aiAndAutomation": ["Anthropic API", "Python automation", "Replit", "Salesforce Ascend"],
+    "spokenLanguages": ["English"]
+  },
+  "experience": [
+    {
+      "title": "Business Analyst",
+      "company": "University of Florida, Annual Giving & Donor Relations (Contract via Spherion)",
+      "location": "Gainesville, FL",
+      "startDate": "2026-05",
+      "endDate": null,
+      "bullets": [
+        "Partner with the team's data analysts to map manual, spreadsheet-driven workflows and build Python-based automation tools in Replit that handle the data preparation, transformation, and formatting behind them, reducing repetitive workload and freeing the analysts for higher-value analytical work.",
+        "Currently developing a suite of internal automation tools in Replit using Python and AI-assisted development, replacing manual, spreadsheet-based steps with automated workflows that generate clean, consistent data for the team to load into Salesforce Ascend.",
+        "Leverage UF's HiPerGator high-performance computing platform across the majority of these projects, tapping significant compute capacity to run data processing and automation workloads that would exceed the limits of a standard local environment.",
+        "Translate the requirements of non-technical partners into working technical solutions, gathering their needs, scoping them into clear specifications, and delivering automation that fits directly into the team's existing data and reporting processes."
+      ]
+    },
+    {
+      "title": "Senior Technical Support Engineer",
+      "company": "Oracle Corporation",
+      "location": "Orlando, FL",
+      "startDate": "2016-05",
+      "endDate": "2025-09",
+      "bullets": [
+        "Managed post-implementation activities for 30+ enterprise deployments of Oracle E-Business Suite modules (Channel Revenue Management, Incentive Compensation), securing timely go-lives and cutting post-launch issues by ~27–30%.",
+        "Led a proactive global initiative to develop automation tools that improved service request resolution efficiency, reducing average \"time to resolution\" by ~33% and increased support engineer productivity across a team of 100+ engineers.",
+        "Facilitated monthly calls between management, technical support leads, and internal development teams.",
+        "Executed product release testing for Channel Revenue Management and Incentive Compensation applications, identifying 20+ critical defects pre-release. Improved product stability, reducing post-release incidents by ~14%.",
+        "Served as moderator for the My Oracle Support Community (MOSC) CRM Channel Revenue Management forum, managing 75+ user interactions, resolving inquiries, and maintaining high engagement and knowledge-sharing standards."
+      ]
+    },
+    {
+      "title": "Technical Support Engineer",
+      "company": "Oracle Corporation",
+      "location": "Orlando, FL",
+      "startDate": "2014-10",
+      "endDate": "2016-05",
+      "bullets": [
+        "Resolved 50+ complex technical issues per quarter for a global Oracle E-Business Suite Channel Revenue Management customer base, maintaining 90%+ customer satisfaction and meeting strict SLA response and resolution targets.",
+        "Conducted in-depth troubleshooting sessions via web conferences and phone calls, analyzing system behavior with customers, identifying root causes, and implementing solutions that improved resolution speed.",
+        "Developed and executed 100+ SQL queries to analyze system data and identify root causes of customer issues, refining diagnostic accuracy and reducing escalation rates by ~15–25%."
+      ]
+    },
+    {
+      "title": "Professional Services Engineer",
+      "company": "Tourico Holidays / HotelBeds",
+      "location": "Altamonte Springs, FL",
+      "startDate": "2013-07",
+      "endDate": "2014-10",
+      "bullets": [
+        "Supported and contributed to the growth of Tourico Holidays' clients using XML-based API integrations and other featured optimizations. Established and maintained productive, strong business relationships with an established client base grossing $200,000,000 per year.",
+        "Acted as the primary technical point of contact for 15+ business partners and enterprise clients, distilling complex technical concepts into actionable insights while leveraging deep analysis of customer data to drive ~10–20% increases in partner revenue.",
+        "Created and maintained a technical documentation website for the implementation of the Tourico Holidays API. Documentation included best-practice methodologies, XML field definitions, an API term glossary, and recommended API method examples.",
+        "Designed targeted SQL-based reports that transformed raw database records into structured client-facing analytics and internal dashboards, enabling partners and company stakeholders to identify booking and search trends, prioritize operational fixes, and streamline workflows for faster decision-making."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master's in Digital Forensics",
+      "school": "Champlain College",
+      "location": "Burlington, VT",
+      "startYear": "2016",
+      "year": "2019"
+    },
+    {
+      "degree": "Bachelor's in Computer Science",
+      "school": "University of Central Florida",
+      "location": "Orlando, FL",
+      "startYear": "2010",
+      "year": "2013"
+    }
+  ],
+  "projects": [
+    {
+      "title": "LEGO® Build Journal",
+      "description": "A full-stack web app with user authentication, a Postgres database, and AI-powered build suggestions, built with React, Node/Express, and the Anthropic API.",
+      "liveUrl": "https://lego.jasminejwalker.com/",
+      "codeUrl": "https://github.com/jasmine-walker/build-journal",
+      "stack": ["React", "Node.js", "Express", "PostgreSQL", "Anthropic API", "JWT auth"]
+    },
+    {
+      "title": "What to Watch Before Avengers: Doomsday",
+      "description": "A comic book-styled MCU viewing guide built in vanilla HTML, CSS, and JavaScript, featuring a custom design system and an interactive quiz.",
+      "liveUrl": "https://mcu.jasminejwalker.com/",
+      "codeUrl": "https://github.com/jasmine-walker/watchable-mcu",
+      "stack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "title": "WNBA Stats Tracker",
+      "description": "Python, SQLite, and the balldontlie API, auto-refreshed daily via GitHub Actions to surface current WNBA season data on a live dashboard.",
+      "liveUrl": "https://wnba.jasminejwalker.com/",
+      "codeUrl": "https://github.com/jasmine-walker/wnba-stats-tracker",
+      "stack": ["Python", "SQLite", "GitHub Actions", "balldontlie API"]
+    },
+    {
+      "title": "Snapchat Forensics",
+      "description": "Collected, analyzed, and preserved Snapchat digital forensics data from a wide range of mobile device applications.",
+      "context": "Champlain College · Aug 2019",
+      "liveUrl": null,
+      "codeUrl": null,
+      "stack": []
+    }
+  ],
+  "volunteering": [
+    {
+      "role": "Course Instructor",
+      "org": "Tech Sassy Girlz",
+      "location": "Orlando, FL",
+      "startDate": "2018-03",
+      "endDate": "2019-04",
+      "description": "Mentored middle and high school girls pursuing STEM careers with Tech Sassy Girlz, a nonprofit focused on career readiness and hands-on learning experiences."
+    },
+    {
+      "role": "Head Coach",
+      "org": "City of Orlando",
+      "location": "Orlando, FL",
+      "startDate": "2017-10",
+      "endDate": "2017-12",
+      "description": "Coached youth basketball with the City of Orlando, teaching fundamentals while fostering self-confidence, teamwork, sportsmanship, and personal growth."
+    }
+  ],
+  "interests": ["Photography", "Traveling", "Reading", "Volunteering", "LEGO", "Marvel movies (I am Groot.)"],
+  "roleMatch": {
+    "headline": "Where My Background Fits",
+    "summary": "Mapping 11+ years of enterprise technical work and full-stack shipping to the core needs of a senior engineering role.",
+    "matches": [
+      {
+        "need": "Full-Stack Development (React, Node, Python)",
+        "evidence": "Shipped three live full-stack projects: a LEGO tracker (React + Node + Postgres + AI), an MCU viewing guide (vanilla JS), and a WNBA stats dashboard (Python + SQLite + GitHub Actions).",
+        "tag": "FULLSTACK_DEV"
+      },
+      {
+        "need": "Automation & AI Tooling",
+        "evidence": "Currently building Python + AI automation tools at UF using Replit and the Anthropic API. Previously led an Oracle-wide automation initiative that cut time-to-resolution by ~33% across 100+ engineers.",
+        "tag": "AUTOMATION_AI"
+      },
+      {
+        "need": "Enterprise-Scale Troubleshooting & Technical Support",
+        "evidence": "11+ years resolving complex enterprise issues at Oracle — 50+ per quarter at 90%+ customer satisfaction, with strict SLA targets across a global customer base.",
+        "tag": "ENTERPRISE_SUPPORT"
+      },
+      {
+        "need": "SQL & Data Systems",
+        "evidence": "Developed 100+ SQL queries for root-cause analysis at Oracle; designed client-facing SQL analytics at Tourico. Comfortable across PostgreSQL, MySQL, SQLite, Oracle, and MongoDB.",
+        "tag": "SQL_DATA"
+      },
+      {
+        "need": "CI/CD & Cloud Deployment",
+        "evidence": "Live projects deployed via GitHub Actions (automated daily refresh), Vercel, and Render. Experience across AWS, Azure, Oracle Cloud, and Supabase.",
+        "tag": "CICD_CLOUD"
+      },
+      {
+        "need": "Translating Technical Concepts for Non-Technical Stakeholders",
+        "evidence": "Core skill across every role — scoping automation specs at UF, facilitating cross-functional calls at Oracle, and enabling 15+ enterprise clients at Tourico.",
+        "tag": "STAKEHOLDER_TRANSLATION"
+      },
+      {
+        "need": "Documentation & Knowledge Sharing",
+        "evidence": "Built and maintained the public Tourico Holidays API documentation site. Standardized procedures and SOPs across large teams at Oracle.",
+        "tag": "DOCUMENTATION"
+      },
+      {
+        "need": "Cross-Functional Collaboration at Scale",
+        "evidence": "Coordinated 30+ enterprise deployments, led a 100+ engineer global initiative, and facilitated ongoing calls between management, support leads, and development teams.",
+        "tag": "CROSS_FUNCTIONAL"
+      }
+    ],
+    "matchScore": null
+  },
+  "recommendations": [
+    {
+      "from": "Former colleague, Oracle",
+      "quote": "Jasmine is the person you want on a cross-functional call when the requirements are fuzzy and the timeline is short. She translates between teams that don't usually speak the same language — and she ships."
+    },
+    {
+      "from": "Enterprise client lead, prior role",
+      "quote": "Working with Jasmine felt less like managing a vendor relationship and more like having an extension of our own team. Sharp, responsive, and genuinely invested in the outcome."
+    },
+    {
+      "from": "Tech Sassy Girlz program lead",
+      "quote": "She has a rare gift for making technical concepts feel approachable. Our students walked away believing they belonged in the field."
+    }
+  ],
+  "easterEggs": {
+    "recycleBin": "Imposter syndrome — empty",
+    "solitaire": "Not now — I'm reviewing resumes",
+    "minesweeper": [
+      "11+ years in enterprise technical support",
+      "Reduced time-to-resolution by ~33%",
+      "Cut post-launch issues by ~27–30%",
+      "100+ SQL queries for root-cause analysis",
+      "Master's in Digital Forensics",
+      "Translates fluent stakeholder ↔ engineer",
+      "Built public API docs portals",
+      "Ships live full-stack applications",
+      "Python automation + AI tooling",
+      "GitHub Actions CI/CD pipelines",
+      "10+ years cross-functional collaboration",
+      "Photography hobbyist",
+      "Marvel movies enthusiast",
+      "LEGO builder",
+      "I am Groot.",
+      "Coached youth basketball",
+      "Mentored girls in STEM",
+      "Resilient under pressure",
+      "Documentation-first mindset",
+      "Self-directed and curious",
+      "Available to start: ready when you are",
+      "Champlain College alum",
+      "UCF alum",
+      "Built tools used by 100+ engineers globally",
+      "Moderated forums for 75+ users",
+      "Designed test plans catching 20+ critical defects"
+    ],
+    "clippyTips": [
+      "It looks like you're reviewing a candidate! Want to see her full-stack projects?",
+      "Did you know Jasmine has 11+ years of enterprise engineering experience?",
+      "Want help finding her automation and AI work?",
+      "It looks like she's a great fit! Want to schedule an interview?",
+      "I see you're hiring — would you like me to highlight her Python and React projects?",
+      "Pro tip: scroll down for the Why_Im_The_Fit.html file."
+    ],
+    "aimMessage": {
+      "screenName": "JazWalker2026",
+      "status": "Available — and a great fit for this role :)",
+      "messages": [
+        "hey! thanks for stopping by 👋",
+        "if you've made it this far, you've probably seen the resume",
+        "feel free to reach out — jasminewalkerj@outlook.com",
+        "or just hit me on linkedin",
+        "talk soon!"
+      ]
+    },
+    "aboutPanel": {
+      "title": "About Jasmine",
+      "lines": [
+        "Technical Engineer, Applications & Systems",
+        "Based in High Springs, FL",
+        "11+ years of experience",
+        "Master's in Digital Forensics",
+        "Currently: open to senior engineering roles",
+        "Favorite Marvel quote: I am Groot."
+      ]
+    }
+  }
+}

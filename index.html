@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasmine Walker — Choose your view</title>
+  <meta name="description" content="A resume in three flavors: clean, Matrix, or Windows XP." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Jasmine Walker — Choose your view" />
+  <meta property="og:description" content="A resume in three flavors: clean, Matrix, or Windows XP." />
+  <meta property="og:image" content="/assets/img/og-image.png" />
+  <meta property="og:url" content="https://jasminejwalker.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jasmine Walker — Choose your view" />
+  <meta name="twitter:description" content="A resume in three flavors: clean, Matrix, or Windows XP." />
+  <meta name="twitter:image" content="/assets/img/og-image.png" />
+  <link rel="icon" id="favicon" type="image/x-icon" href="/assets/img/favicon-plain.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer data-domain="jasminejwalker.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/css/shared.css" />
+  <link rel="stylesheet" href="/css/landing.css" />
+</head>
+<body class="landing-page">
+
+  <!-- Intro overlay -->
+  <div id="intro-overlay" aria-hidden="true">
+    <div id="intro-text" aria-label="Jasmine Walker"></div>
+    <div id="intro-cursor"></div>
+  </div>
+
+  <!-- Main picker -->
+  <main id="picker" class="picker hidden" role="main">
+    <header class="picker-header">
+      <img src="/assets/img/jasmine.png" class="picker-photo" alt="Jasmine Walker" />
+      <h1 class="picker-name">Jasmine Walker</h1>
+      <p class="picker-subtitle">Choose your view.</p>
+      <div id="landing-contact" class="landing-contact" aria-label="Contact information"></div>
+    </header>
+
+    <div class="cards-grid" role="list">
+
+      <!-- Card 1: Plain -->
+      <a href="/plain" class="card card-plain" role="listitem" tabindex="0" aria-label="Plain view — Clean and readable resume">
+        <div class="card-preview plain-preview" aria-hidden="true">
+          <div class="pp-name">Jasmine Walker</div>
+          <div class="pp-divider"></div>
+          <div class="pp-line pp-line-long"></div>
+          <div class="pp-line pp-line-medium"></div>
+          <div class="pp-line pp-line-short"></div>
+        </div>
+        <div class="card-label">
+          <span class="card-title">Plain</span>
+          <span class="card-subtitle">Clean &amp; readable</span>
+        </div>
+      </a>
+
+      <!-- Card 2: Matrix -->
+      <a href="/matrix" class="card card-matrix" role="listitem" tabindex="0" aria-label="Matrix view — Wake up, Neo">
+        <div class="card-preview matrix-preview" aria-hidden="true">
+          <canvas id="mini-rain" width="260" height="160"></canvas>
+        </div>
+        <div class="card-label">
+          <span class="card-title">Matrix</span>
+          <span class="card-subtitle">Wake up, Neo…</span>
+        </div>
+      </a>
+
+      <!-- Card 3: XP -->
+      <a href="/xp" class="card card-xp" role="listitem" tabindex="0" aria-label="Windows XP view — Y2K nostalgia">
+        <div class="card-preview xp-preview" aria-hidden="true">
+          <div class="xp-bliss">
+            <div class="xp-sky"></div>
+            <div class="xp-hills"></div>
+            <div class="xp-cloud xp-cloud-1"></div>
+            <div class="xp-cloud xp-cloud-2"></div>
+          </div>
+          <div class="mini-xp-window">
+            <div class="mini-xp-titlebar">
+              <span class="mini-xp-icon">📄</span>
+              <span class="mini-xp-title">My_Resume.doc</span>
+              <div class="mini-xp-buttons">
+                <span class="mini-btn mini-min">─</span>
+                <span class="mini-btn mini-max">□</span>
+                <span class="mini-btn mini-close">✕</span>
+              </div>
+            </div>
+            <div class="mini-xp-body"></div>
+          </div>
+          <div class="mini-xp-taskbar">
+            <div class="mini-start-btn">
+              <span class="mini-xp-flag">⊞</span> Start
+            </div>
+            <div class="mini-clock">4:52 PM</div>
+          </div>
+        </div>
+        <div class="card-label">
+          <span class="card-title">Windows XP</span>
+          <span class="card-subtitle">Y2K nostalgia</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <script type="module" src="/js/landing.js"></script>
+</body>
+</html>

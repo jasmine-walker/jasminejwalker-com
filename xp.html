@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasmine Walker — Windows XP</title>
+  <meta name="description" content="Jasmine Walker — Application developer & systems engineer. Experience the resume like it's 2001." />
+  <meta property="og:title" content="Jasmine Walker — Windows XP" />
+  <meta property="og:description" content="Experience the resume like it's 2001." />
+  <meta property="og:image" content="/assets/img/og-image.png" />
+  <meta property="og:url" content="https://jasminejwalker.com/xp" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jasmine Walker — Windows XP" />
+  <meta name="twitter:description" content="Experience the resume like it's 2001." />
+  <meta name="twitter:image" content="/assets/img/og-image.png" />
+  <link rel="icon" id="favicon" type="image/x-icon" href="/assets/img/favicon-xp.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Tahoma&display=swap" rel="stylesheet" />
+  <script defer data-domain="jasminejwalker.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="stylesheet" href="/css/shared.css" />
+  <link rel="stylesheet" href="/css/xp.css" />
+</head>
+<body class="xp-page">
+
+  <!-- Click to enter splash -->
+  <div id="xp-splash" class="xp-splash" role="dialog" aria-label="Click to enter the Windows XP experience" aria-modal="true">
+    <div class="splash-content">
+      <div class="splash-power" aria-hidden="true">⏻</div>
+      <h1 class="splash-title">Jasmine Walker</h1>
+      <p class="splash-sub">Click anywhere to enter</p>
+      <div class="splash-dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boot screen -->
+  <div id="xp-boot" class="xp-boot hidden" aria-label="Windows XP loading" role="status" aria-live="polite">
+    <div class="boot-logo">
+      <div class="boot-flag">
+        <div class="flag-q1"></div>
+        <div class="flag-q2"></div>
+        <div class="flag-q3"></div>
+        <div class="flag-q4"></div>
+      </div>
+      <div class="boot-wordmark">
+        <span class="boot-windows">Windows</span>
+        <span class="boot-xp">XP</span>
+      </div>
+    </div>
+    <div class="boot-bar-wrap">
+      <div id="boot-bar" class="boot-bar"></div>
+    </div>
+    <p class="boot-copy">Copyright © Microsoft Corporation</p>
+  </div>
+
+  <!-- Desktop -->
+  <div id="xp-desktop" class="xp-desktop hidden" role="main" aria-label="Windows XP Desktop">
+
+    <!-- Bliss wallpaper -->
+    <div class="bliss-bg" aria-hidden="true">
+      <div class="bliss-sky"></div>
+      <div class="bliss-hills"></div>
+      <div class="bliss-cloud bliss-cloud-1"></div>
+      <div class="bliss-cloud bliss-cloud-2"></div>
+      <div class="bliss-cloud bliss-cloud-3"></div>
+    </div>
+
+    <!-- Desktop icons -->
+    <div id="desktop-icons" class="desktop-icons" role="list" aria-label="Desktop icons"></div>
+
+    <!-- Project shortcuts — right side -->
+    <div id="desktop-icons-right" class="desktop-icons-right" role="list" aria-label="Project shortcuts">
+      <div class="projects-label" aria-hidden="true">📁 Projects</div>
+    </div>
+
+    <!-- Standalone resume download button -->
+    <div class="xp-dl-resume-wrap">
+      <button id="xp-dl-resume-btn" class="xp-dl-resume-btn" aria-label="Download Jasmine's resume as PDF">
+        <span class="xp-dl-icon">📥</span>
+        <span class="xp-dl-text">Download Resume</span>
+      </button>
+    </div>
+
+    <!-- Windows container -->
+    <div id="windows-container" class="windows-container" aria-live="polite"></div>
+
+    <!-- Right-click context menu -->
+    <div id="desktop-context-menu" class="context-menu hidden" role="menu" aria-label="Desktop context menu">
+      <div class="context-item" role="menuitem" tabindex="-1" data-action="refresh">Refresh</div>
+      <div class="context-item" role="menuitem" tabindex="-1" data-action="arrange">Arrange Icons</div>
+      <div class="context-separator"></div>
+      <div class="context-item" role="menuitem" tabindex="-1" data-action="properties">Properties</div>
+    </div>
+
+    <!-- Clippy -->
+    <div id="clippy" class="clippy hidden" role="complementary" aria-label="Clippy assistant">
+      <div class="clippy-bubble" role="alertdialog" aria-label="Clippy tip">
+        <div id="clippy-text"></div>
+        <div class="clippy-actions">
+          <button class="clippy-btn" id="clippy-yes">Yes, please</button>
+          <button class="clippy-btn" id="clippy-no">No thanks</button>
+          <button class="clippy-btn clippy-dismiss" id="clippy-dismiss">Don't show again</button>
+        </div>
+      </div>
+      <img class="clippy-body" src="/assets/img/clippy.png" alt="Clippy" aria-hidden="true" />
+    </div>
+
+    <!-- Taskbar -->
+    <div id="xp-taskbar" class="xp-taskbar" role="navigation" aria-label="Windows XP Taskbar">
+      <button id="start-btn" class="start-btn" aria-label="Start menu" aria-expanded="false" aria-controls="start-menu">
+        <div class="start-flag" aria-hidden="true">
+          <div class="sf-q1"></div>
+          <div class="sf-q2"></div>
+          <div class="sf-q3"></div>
+          <div class="sf-q4"></div>
+        </div>
+        <span>start</span>
+      </button>
+
+      <div id="taskbar-windows" class="taskbar-windows" role="list" aria-label="Open windows"></div>
+
+      <div class="system-tray" role="group" aria-label="System tray">
+        <button id="mute-btn" class="tray-icon" aria-label="Toggle mute" title="Volume">🔊</button>
+        <button id="network-btn" class="tray-icon" aria-label="Network connections" title="Network">🌐</button>
+        <span id="xp-clock" class="xp-clock" aria-live="off" aria-label="Current time"></span>
+      </div>
+    </div>
+
+    <!-- Start menu -->
+    <div id="start-menu" class="start-menu hidden" role="dialog" aria-label="Start menu">
+      <div class="start-menu-header">
+        <img class="start-avatar" src="/assets/img/jasmine.png" alt="Jasmine Walker" aria-hidden="true" />
+        <span class="start-username">Jasmine Walker</span>
+      </div>
+      <div class="start-menu-body">
+        <div class="start-col start-left">
+          <div class="start-item" data-action="open-resume" role="button" tabindex="0">
+            <span class="si-icon">📄</span> My Resume
+          </div>
+          <div class="start-item" data-action="open-rolematch" role="button" tabindex="0">
+            <span class="si-icon">🌐</span> Why I'm the Fit
+          </div>
+          <div class="start-item" data-action="open-recdocs" role="button" tabindex="0">
+            <span class="si-icon">📁</span> Recent Documents
+          </div>
+          <div class="start-item" data-action="open-recommendations" role="button" tabindex="0">
+            <span class="si-icon">💬</span> Recommendations
+          </div>
+          <div class="start-item bonzi" data-action="open-bonzi" role="button" tabindex="0">
+            <span class="si-icon">🦊</span> BonziBuddy.exe
+          </div>
+        </div>
+        <div class="start-divider"></div>
+        <div class="start-col start-right">
+          <div class="start-item" data-action="open-mycomputer" role="button" tabindex="0">
+            <span class="si-icon">🖥️</span> My Computer
+          </div>
+          <div class="start-item" data-action="open-about" role="button" tabindex="0">
+            <span class="si-icon">ℹ️</span> About Jasmine
+          </div>
+          <div class="start-item" data-action="open-contact" role="button" tabindex="0">
+            <span class="si-icon">📧</span> Contact
+          </div>
+          <div class="start-item" data-action="open-controlpanel" role="button" tabindex="0">
+            <span class="si-icon">⚙️</span> Control Panel
+          </div>
+          <div class="start-item" data-action="open-search" role="button" tabindex="0">
+            <span class="si-icon">🔍</span> Search
+          </div>
+        </div>
+      </div>
+      <div class="start-menu-footer">
+        <button class="start-footer-btn" id="logoff-btn" aria-label="Log off — return to picker">
+          <span aria-hidden="true">🚪</span> Log Off
+        </button>
+        <button class="start-footer-btn" id="shutdown-btn" aria-label="Turn off computer">
+          <span aria-hidden="true">⏻</span> Turn Off Computer
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Shutdown overlay -->
+  <div id="shutdown-overlay" class="shutdown-overlay hidden" aria-live="polite">
+    <div class="shutdown-content">
+      <div class="shutdown-icon" aria-hidden="true">⏻</div>
+      <p class="shutdown-text">It is now safe to turn off your computer.</p>
+      <p class="shutdown-sub">Redirecting to picker…</p>
+    </div>
+  </div>
+
+  <!-- Floating XP contact CTA -->
+  <div id="contact-cta" class="contact-cta-xp hidden" role="complementary">
+    <button id="cta-trigger" class="cta-btn-xp xp-btn" aria-expanded="false" aria-controls="contact-panel">
+      Contact me
+    </button>
+    <div id="contact-panel" class="contact-panel-xp xp-window-body hidden" role="dialog" aria-label="Contact Jasmine Walker"></div>
+  </div>
+
+  <script type="module" src="/js/shared.js"></script>
+  <script type="module" src="/js/xp-windows.js"></script>
+  <script type="module" src="/js/xp-taskbar.js"></script>
+  <script type="module" src="/js/xp-clippy.js"></script>
+  <script type="module" src="/js/xp-easter-eggs.js"></script>
+  <script type="module" src="/js/contact-cta.js"></script>
+  <script type="module" src="/js/xp-boot.js"></script>
+</body>
+</html>
