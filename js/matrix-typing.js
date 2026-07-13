@@ -256,6 +256,13 @@ async function init() {
   renderResumeContent(r);
   renderRoleMatch(r);
 
+  // On mobile, move the role-match panel inside the scroll container
+  // so it flows as content rather than overlapping as a fixed overlay
+  if (window.innerWidth <= 480) {
+    const inner = document.getElementById('matrix-resume-inner');
+    if (inner && rmpPanel) inner.appendChild(rmpPanel);
+  }
+
   skipBtn?.addEventListener('click', skipAll);
   redPillBtn?.addEventListener('click', chooseRedPill);
   bluePillBtn?.addEventListener('click', () => { window.location.href = '/'; });

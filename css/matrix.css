@@ -629,6 +629,57 @@
 /* ===== UTILITIES ===== */
 .hidden { display: none !important; }
 
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  /* Rain controls — invisible on mobile (canvas hidden behind resume), so hide them */
+  .rain-controls {
+    display: none;
+  }
+  /* Role match panel — flows as content inside the scroll container on mobile
+     (JS moves it into #matrix-resume-inner, so position:relative from
+     the 900px breakpoint applies cleanly with no fixed-overlay issues) */
+  /* Morpheus boot screen — tighten padding, prevent overflow */
+  .morpheus-screen {
+    padding: 1.25rem 1rem 1rem;
+    width: 94vw;
+  }
+  .morpheus-lines {
+    min-height: 6rem;
+  }
+  /* Pill buttons — stack vertically, full width */
+  .pill-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .pill-btn {
+    min-width: 0;
+    width: 100%;
+  }
+  /* Terminal intro lines — allow wrapping on narrow screens */
+  #intro-lines .intro-line {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  /* Resume content — tighter padding on mobile */
+  .matrix-resume {
+    padding: 4rem 1rem 6rem;
+  }
+  /* Download + skip buttons — prevent clipping at top-right */
+  .skip-intro {
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+  .matrix-dl-btn {
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+  /* Contact CTA — tuck in closer on small screens */
+  .contact-cta-matrix {
+    right: 0.5rem;
+    bottom: 1rem;
+  }
+}
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   .matrix-cursor { animation: none; }

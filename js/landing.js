@@ -10,6 +10,9 @@ setFavicon(favicons.plain);
 async function renderContactBar() {
   const r = await loadResume();
   if (!r) return;
+  const tagline = document.getElementById('picker-tagline');
+  if (tagline) tagline.textContent = r.meta.tagline;
+
   const el = document.getElementById('landing-contact');
   if (!el) return;
   el.innerHTML = `
@@ -24,13 +27,13 @@ async function renderContactBar() {
       </a>
     </div>
     <div class="lc-secondary">
-      <a href="mailto:${r.contact.email}" class="lc-link" onclick="trackEvent('landing-email')">${r.contact.email}</a>
+      <a href="mailto:${r.contact.email}" class="lc-link" onclick="trackEvent('landing-email')"><svg class="lc-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>${r.contact.email}</a>
       <span class="lc-sep">·</span>
-      <a href="tel:${r.contact.phone.replace(/\D/g,'')}" class="lc-link" onclick="trackEvent('landing-phone')">${r.contact.phone}</a>
+      <a href="tel:${r.contact.phone.replace(/\D/g,'')}" class="lc-link" onclick="trackEvent('landing-phone')"><svg class="lc-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg>${r.contact.phone}</a>
       <span class="lc-sep">·</span>
-      <a href="https://${r.meta.website}" target="_blank" rel="noopener" class="lc-link" onclick="trackEvent('landing-website')">${r.meta.website}</a>
+      <a href="https://${r.meta.website}" target="_blank" rel="noopener" class="lc-link" onclick="trackEvent('landing-website')"><svg class="lc-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>${r.meta.website}</a>
       <span class="lc-sep">·</span>
-      <a href="${r.meta.resumePdfUrl}" download="Jasmine_Walker_Resume.pdf" target="_blank" rel="noopener" class="lc-link lc-link-download" onclick="trackEvent('landing-resume-download')">↓ Resume</a>
+      <a href="${r.meta.resumePdfUrl}" download="Jasmine_Walker_Resume.pdf" target="_blank" rel="noopener" class="lc-link lc-link-download" onclick="trackEvent('landing-resume-download')"><svg class="lc-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Resume</a>
     </div>
   `;
 }
