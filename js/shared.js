@@ -1,3 +1,6 @@
+import { inject } from '@vercel/analytics';
+inject();
+
 // ===== SHARED JS =====
 
 let resumeCache = null;
