@@ -13,3 +13,5 @@ replit.nix
 .config/
 .upm/
 .breakpoints
+
+package-lock.json
