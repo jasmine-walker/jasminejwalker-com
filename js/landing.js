@@ -1,10 +1,6 @@
 // ===== LANDING PAGE JS =====
 
-import { generateFavicons, setFavicon, loadResume } from '/js/shared.js';
-
-// Set plain favicon for landing
-const favicons = generateFavicons();
-setFavicon(favicons.plain);
+import { loadResume } from '/js/shared.js';
 
 // ---- Contact bar ----
 async function renderContactBar() {
