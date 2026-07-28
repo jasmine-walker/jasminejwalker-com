@@ -160,7 +160,7 @@ function openBonziBuddy() {
         <div style="font-size:3rem">🦊</div>
         <div style="font-size:12px;color:#fff;font-family:Tahoma,sans-serif">
           Hi! I'm BonziBuddy!<br/><br/>
-          Did you know Jasmine Walker has <strong>10+ years</strong> of enterprise experience?<br/><br/>
+          Did you know Jasmine Walker has <strong>11+ years</strong> of enterprise experience?<br/><br/>
           <em style="font-size:10px;opacity:0.8">(just kidding — pure nostalgia)</em>
         </div>
       </div>`

@@ -4,8 +4,8 @@
     "tagline": "Technical Engineer, Applications & Systems",
     "location": "High Springs, FL",
     "website": "jasminejwalker.com",
-    "lastUpdated": "2026-07-10",
-    "resumePdfUrl": "https://drive.google.com/uc?export=download&id=1-N8oziuQgrP5JwJoVtiOyqQtmjJuWaW5"
+    "lastUpdated": "2026-07-28",
+    "resumePdfUrl": "/Jasmine_Walker_Resume.pdf"
   },
   "contact": {
     "email": "jasminewalkerj@outlook.com",
@@ -29,12 +29,12 @@
       "company": "University of Florida, Annual Giving & Donor Relations (Contract via Spherion)",
       "location": "Gainesville, FL",
       "startDate": "2026-05",
-      "endDate": null,
+      "endDate": "2026-07",
       "bullets": [
-        "Partner with the team's data analysts to map manual, spreadsheet-driven workflows and build Python-based automation tools in Replit that handle the data preparation, transformation, and formatting behind them, reducing repetitive workload and freeing the analysts for higher-value analytical work.",
-        "Currently developing a suite of internal automation tools in Replit using Python and AI-assisted development, replacing manual, spreadsheet-based steps with automated workflows that generate clean, consistent data for the team to load into Salesforce Ascend.",
-        "Leverage UF's HiPerGator high-performance computing platform across the majority of these projects, tapping significant compute capacity to run data processing and automation workloads that would exceed the limits of a standard local environment.",
-        "Translate the requirements of non-technical partners into working technical solutions, gathering their needs, scoping them into clear specifications, and delivering automation that fits directly into the team's existing data and reporting processes."
+        "Partnered with the team's data analysts to map manual, spreadsheet-driven workflows and build Python-based automation tools in Replit that handled the data preparation, transformation, and formatting behind them, reducing repetitive workload and freeing the analysts for higher-value analytical work.",
+        "Developed a suite of internal automation tools in Replit using Python and AI-assisted development, replacing manual, spreadsheet-based steps with automated workflows that generated clean, consistent data for the team to load into Salesforce Ascend.",
+        "Leveraged UF's HiPerGator high-performance computing platform across the majority of these projects, tapping significant compute capacity to run data processing and automation workloads that would exceed the limits of a standard local environment.",
+        "Translated the requirements of non-technical partners into working technical solutions, gathering their needs, scoping them into clear specifications, and delivering automation that fit directly into the team's existing data and reporting processes."
       ]
     },
     {
@@ -154,7 +154,7 @@
       },
       {
         "need": "Automation & AI Tooling",
-        "evidence": "Currently building Python + AI automation tools at UF using Replit and the Anthropic API. Previously led an Oracle-wide automation initiative that cut time-to-resolution by ~33% across 100+ engineers.",
+        "evidence": "Built Python + AI automation tools at UF using Replit and the Anthropic API. Previously led an Oracle-wide automation initiative that cut time-to-resolution by ~33% across 100+ engineers.",
         "tag": "AUTOMATION_AI"
       },
       {
@@ -218,7 +218,7 @@
       "Ships live full-stack applications",
       "Python automation + AI tooling",
       "GitHub Actions CI/CD pipelines",
-      "10+ years cross-functional collaboration",
+      "11+ years cross-functional collaboration",
       "Photography hobbyist",
       "Marvel movies enthusiast",
       "LEGO builder",

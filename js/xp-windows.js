@@ -584,7 +584,7 @@ export function openSearchWindow() {
         <strong>1 result found</strong>
       </div>
       <div style="font-size:11px;color:#316ac5;cursor:pointer;margin-bottom:6px;">📄 <u>Jasmine Walker — Resume.txt</u></div>
-      <div style="font-size:10px;color:#555;margin-left:16px;">Application developer &amp; systems engineer · 10+ years · High Springs, FL · Match: <strong>94.7%</strong></div>
+      <div style="font-size:10px;color:#555;margin-left:16px;">Senior technical professional · 11+ years · High Springs, FL · Match: <strong>94.7%</strong></div>
     </div>`
   });
 }
